@@ -33,14 +33,14 @@ In developing ResQnect, several Python concepts and libraries were applied to ac
 - **Error Handling** to ensure program reliability during real-world usage.
 - [Additional libraries or Python features relevant to the project, if any.]
 
-### Integration with SDG
+### Integration with SDG 🌍
 <div align="center">
   <img src="https://github.com/yshlae/ResQnect/blob/main/images/SDG%20Goal%2011.jpg" alt="SDG Goal 11" width="500">
 </div>
 
 This project aligns with **Sustainable Development Goal (SDG) 11** by promoting **sustainable, resilient, and inclusive urban planning and management**. The system's core functionality supports communities in effectively managing volunteers, resources, and responses to minimize disaster impacts.
 
-### Running the Program
+### Running the Program 👩‍💻
 To run the ResQnect system, follow these steps:
 1. Clone the repository:
    ```bash
