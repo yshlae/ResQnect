@@ -35,7 +35,7 @@ In developing ResQnect, several Python concepts and libraries were applied to ac
 
 ### Integration with SDG
 <div align="center">
-  <img src="https://github.com/yshlae/ResQnect/blob/main/images/SDG%20Goal%2011.jpg" alt="SDG Goal 11" width="700">
+  <img src="https://github.com/yshlae/ResQnect/blob/main/images/SDG%20Goal%2011.jpg" alt="SDG Goal 11" width="500">
 </div>
 
 This project aligns with **Sustainable Development Goal (SDG) 11** by promoting **sustainable, resilient, and inclusive urban planning and management**. The system's core functionality supports communities in effectively managing volunteers, resources, and responses to minimize disaster impacts.
