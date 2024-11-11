@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/yshlae/Banaag-Ashley-IT2104_OOPactivities/blob/main/images/resqnect%20logo.png" alt="ResQnect Logo" width="240" height="240">
+  <img src="https://github.com/yshlae/ResQnect/blob/main/images/resqnect%20logo.png alt="ResQnect Logo" width="240" height="240">
   
   <h1>ResQnect</h1>
   
@@ -35,6 +35,9 @@ In developing ResQnect, several Python concepts and libraries were applied to ac
 
 ### Integration with SDG
 This project aligns with **Sustainable Development Goal (SDG) 11** by promoting **sustainable, resilient, and inclusive urban planning and management**. The system's core functionality supports communities in effectively managing volunteers, resources, and responses to minimize disaster impacts.
+
+<div align="center">
+  <img src="https://github.com/yshlae/ResQnect/blob/main/images/resqnect%20logo.png
 
 ### Running the Program
 To run the ResQnect system, follow these steps:
