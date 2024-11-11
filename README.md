@@ -25,7 +25,7 @@
 ---
 
 ### Project Overview
-The system helps relief organizations or local governments streamline disaster response by managing volunteer efforts, keeping track of resources like food and medical supplies, and monitoring the speed and efficiency of disaster response. ResQnect is a comprehensive disaster response management system designed to assist communities in preparation, response, and recovery during emergencies. This project aligns with **SDG 11: Sustainable Cities and Communities** by providing organized resources and volunteer management to enhance disaster response capabilities. 
+**𝘙𝘦𝘴𝘘𝘯𝘦𝘤𝘵** is a comprehensive disaster response management system designed to help local governments and relief organizations effectively coordinate emergency response activities. By providing streamlined volunteer management and effective tracking of essential resources like food and medical supplies, the system enables communities to be better prepared for emergencies. The main objective of this system is to assist communities prepare for, respond to, and recover from calamities. 
 
 ### Application of Python Concepts
 In developing ResQnect, several Python concepts and libraries were applied to achieve efficient and scalable performance, including:
