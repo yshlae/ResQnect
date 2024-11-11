@@ -31,7 +31,6 @@
 In developing ResQnect, several Python concepts and libraries were applied to achieve efficient and scalable performance, including:
 - **Object-Oriented Programming (OOP)** for a modular and maintainable structure.
 - **Error Handling** to ensure program reliability during real-world usage.
-- [Additional libraries or Python features relevant to the project, if any.]
 
 ### Integration with SDG 🌍
 <div align="center">
