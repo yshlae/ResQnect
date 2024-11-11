@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/yshlae/ResQnect/blob/main/images/resqnect%20logo.png" alt="ResQnect Logo" width="280" height="280">
+  <img src="https://github.com/yshlae/ResQnect/blob/main/images/resqnect%20logo.png" alt="ResQnect Logo" width="240" height="240">
   
   <h1>ResQnect</h1>
   
