@@ -89,6 +89,8 @@ This system contributes to SDG 11 in three key areas. First, it aids in **prepar
 </div>
 
 ### Running the Program 👩‍💻
+### Instructions for Running the Program 💻
+
 To run the ResQnect system, follow these steps:
 1. Clone the repository:
    ```bash
@@ -96,7 +98,10 @@ To run the ResQnect system, follow these steps:
 2. Navigate to the project repository:
    ```bash
    cd ResQnect
-3. Run the program:
+3. Install required dependencies:
+   ```bash
+   pip install -r requirements.txt
+4. Run the program:
    ```bash
    python main.py
    
@@ -113,7 +118,8 @@ To run the **ResQnect** Disaster Response Management System, follow these steps:
    - **2. Resource Management**
    - **3. Task Assignment**
    - **4. Disaster Response Tracker**
-   - **5. Exit**
+   - **5. Response Time Reports**
+   - **6. Exit**
 
    Use the number associated with each option to select what you want to do.
 
@@ -141,8 +147,10 @@ To run the **ResQnect** Disaster Response Management System, follow these steps:
    - Choose **4. Disaster Response Tracker** from the main menu to view and manage ongoing tasks.
    - The program will display the list of tasks with their current statuses (e.g., **Assigned**, **Completed**).
    - You can update the status of tasks (e.g., mark a task as **Completed** once it’s finished), ensuring real-time tracking of disaster response efforts.
+  
+6. **Response Time Reports**
 
-6. **Exit**
-   - If you wish to exit the program, select **5. Exit** from the main menu.
+7. **Exit**
+   - If you wish to exit the program, select **6. Exit** from the main menu.
 
 ---
