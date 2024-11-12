@@ -73,7 +73,7 @@ In developing ResQnect, several Python concepts and libraries were applied to ac
   - *Tracking Tasks:* Assigned tasks are saved in a list, allowing for status updates (e.g., “Assigned” to “Completed”).
   - *Response Tracking:* Each volunteer’s assigned tasks and their statuses are tracked, providing an overview of response efforts in real time.
 
-     <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
+<hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
 </div>
 
 ### Integration with SDG 🌍
