@@ -35,6 +35,16 @@ In developing ResQnect, several Python concepts and libraries were applied to ac
   - For managing these groups, I implemented `VolunteerManager` and `ResourceManager` classes to handle actions like adding, viewing, or updating records.
   - The `DisasterResponseSystem` class serves as the main controller, integrating volunteer and resource management, task assignment, and response tracking under one system.
 
+ - **Encapsulation**
+   - Refers to bundling data and methods that operate on that data into a single unit or class, while restricting direct access to some of the object’s components. In the `Volunteer` and `Resource` classes, I encapsulated the attributes (e.g., name, `v_type`, quantity) and their corresponding methods. These methods control how the data is accessed and updated, preventing direct manipulation of object attributes.
+
+ - **Abstraction**
+   - Concept of hiding the complex implementation details and exposing only the essential features of an object or system. In the `VolunteerManager` and `ResourceManager` classes, I abstracted complex operations like saving/loading data and updating records. The user interacts with simple menus, not needing to know the internal workings (e.g., file handling or JSON parsing). The `DisasterResponseSystem` class abstracts the process of managing volunteers, resources, and tasks by using a simple menu system. Users can focus on high-level actions (assigning tasks, managing resources) without needing to handle individual tasks behind the scenes.
+
+ - **Polymorphism**
+    - Allows different classes to define methods with the same name, but each can behave differently depending on the class it belongs to. I applied polymorphism in the `__str__()` method. Both the `Volunteer` and `Resource` classes have a `__str__()` method that returns a string representation of the object, but each class has its own implementation to represent its attributes (e.g., volunteer name and availability vs. resource type and quantity). 
+    - The same `save_volunteers()` and `save_resources()` methods work for different data types (volunteers and resources) despite the differences in how they are structured, allowing for consistent handling and storage of data.
+
 - **Data Saving and Loading (JSON and File Handling)**  🗂️
   - *Saving Data:* Whenever a new volunteer or resource is added or updated, their information is stored in JSON files (`volunteers.json` or `resources.json`). This ensures data remains available, even if the program is closed and reopened.
   - *Loading Data:* On startup, the system checks for existing JSON files to load saved data, eliminating the need to re-enter information each time.
