@@ -30,9 +30,6 @@
 ### Application of Python Concepts 🐍
 In developing ResQnect, several Python concepts and libraries were applied to achieve efficient and scalable performance, including:
 
-### Application of Python Concepts
-In developing ResQnect, several Python concepts and libraries were applied to achieve efficient and scalable performance, including:
-
 - **Classes and Objects (OOP Basics)**  
   - I created the `Volunteer` and `Resource` classes to represent individual volunteers and resources.
   - For managing these groups, I implemented `VolunteerManager` and `ResourceManager` classes to handle actions like adding, viewing, or updating records.
