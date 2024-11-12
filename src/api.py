@@ -255,4 +255,3 @@ class DisasterResponseSystem:
 if __name__ == "__main__":
     system = DisasterResponseSystem()
     system.start()
-h
