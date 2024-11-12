@@ -13,14 +13,16 @@
 </div>
 
 <details>
-  <summary>Table of Contents</summary>
+  <summary><strong>Table of Contents</strong></summary>
   
   1. [Project Overview](#project-overview)  
   2. [Application of Python Concepts](#application-of-python-concepts)  
   3. [Integration with SDG](#integration-with-sdg)  
-  4. [Running the Program](#running-the-program)  
+  4. [Running the Program](#running-the-program)
 
 </details>
+
+<hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
 
 ---
 
