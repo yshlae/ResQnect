@@ -90,4 +90,53 @@ To run the ResQnect system, follow these steps:
 2. Navigate to the project repository:
    ```bash
    cd ResQnect
+3. Run the program:
+   ```bash
+   python main.py
+   
+  <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
+</div>
 
+### Instructions for Running the Program 💻
+
+To run the **ResQnect** Disaster Response Management System, follow these steps:
+
+1. **Start the Program**  
+   When you run the program, you will be presented with the **main menu**. The menu will look something like this:
+   - **1. Volunteer Management**
+   - **2. Resource Management**
+   - **3. Task Assignment**
+   - **4. Disaster Response Tracker**
+   - **5. Exit**
+
+   Use the number associated with each option to select what you want to do.
+
+2. **Volunteer Management: Adding a New Volunteer**
+   - Choose **1. Volunteer Management** from the main menu.
+   - The program will prompt you to enter the following details for a new volunteer:
+     - **Name**: Enter the volunteer’s name.
+     - **Type**: Specify the type of volunteer (e.g., **medical** or **rescue**).
+     - **Availability**: Specify if the volunteer is available or unavailable.
+   - After entering the details, the program will save this data in **volunteers.json** for future use.
+
+3. **Resource Management: Adding Resources**
+   - Go back to the main menu and choose **2. Resource Management**.
+   - You will be asked to enter the resources available for use in the disaster response, such as:
+     - **Food**: Enter the quantity of food available.
+     - **Water**: Enter the quantity of water available.
+   - This data is saved in **resources.json**, ensuring that the system can access these resources whenever needed.
+
+4. **Task Assignment: Assigning Tasks to Volunteers**
+   - From the main menu, choose **3. Task Assignment**.
+   - You will be prompted to assign a task (such as **medical aid**) to an available volunteer.
+   - The task is added to a task list and marked as **Assigned**, keeping track of which volunteers are assigned to which tasks.
+
+5. **Disaster Response Tracker: Tracking and Updating Tasks**
+   - Choose **4. Disaster Response Tracker** from the main menu to view and manage ongoing tasks.
+   - The program will display the list of tasks with their current statuses (e.g., **Assigned**, **Completed**).
+   - You can update the status of tasks (e.g., mark a task as **Completed** once it’s finished), ensuring real-time tracking of disaster response efforts.
+
+6. **Exit**
+   - If you wish to exit the program, select **5. Exit** from the main menu.
+
+---
