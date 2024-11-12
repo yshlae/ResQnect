@@ -57,9 +57,9 @@ In developing ResQnect, several Python concepts and libraries were applied to ac
   - *Dictionaries for Resource Management:* Resources are organized in a dictionary (`self.resources`) with resource types as keys and quantities as values. This allows for quick lookups and updates.
 
 - **Task Assignment and Tracking**  
-  - *Task Assignment Mechanism:* Users can assign tasks (e.g., medical aid, food distribution) to available volunteers.
-  - *Task Tracking System:* Assigned tasks are saved in a list, allowing for status updates (e.g., “Assigned” to “Completed”).
-  - *Response Monitoring:* Each volunteer’s assigned tasks and their statuses are tracked, providing an overview of response efforts in real time.
+  - *Assigning Tasks:* Users can assign tasks (e.g., medical aid, food distribution) to available volunteers.
+  - *Tracking Tasks:* Assigned tasks are saved in a list, allowing for status updates (e.g., “Assigned” to “Completed”).
+  - *Response Tracking:* Each volunteer’s assigned tasks and their statuses are tracked, providing an overview of response efforts in real time.
 
 ### Integration with SDG 🌍
 <div align="center">
