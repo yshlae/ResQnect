@@ -24,6 +24,9 @@
 
 ---
 
+ <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
+</div>
+
 ### Project Overview 🔍
 **𝘙𝘦𝘴𝘘𝘯𝘦𝘤𝘵** is a comprehensive disaster response management system designed to help local governments and relief organizations effectively coordinate emergency response activities. By providing streamlined volunteer management and effective tracking of essential resources like food and medical supplies, the system enables communities to be better prepared for emergencies. The main objective of this system is to assist communities prepare for, respond to, and recover from calamities. 
 
@@ -73,6 +76,9 @@ In developing ResQnect, several Python concepts and libraries were applied to ac
   - *Tracking Tasks:* Assigned tasks are saved in a list, allowing for status updates (e.g., “Assigned” to “Completed”).
   - *Response Tracking:* Each volunteer’s assigned tasks and their statuses are tracked, providing an overview of response efforts in real time.
 
+     <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
+</div>
+
 ### Integration with SDG 🌍
 <div align="center">
   <img src="https://github.com/yshlae/ResQnect/blob/main/images/SDG%20Goal%2011.png" alt="SDG Goal 11" width="1000">
@@ -81,6 +87,9 @@ In developing ResQnect, several Python concepts and libraries were applied to ac
 **Sustainable Development Goal (SDG) 11: Sustainable Cities and Communities** aims to make cities and human settlements inclusive, safe, resilient, and sustainable. This goal focuses on improving urban planning, reducing the impact of natural disasters, and ensuring that communities are better prepared to respond to and recover from emergencies. **ResQnect** directly supports this goal by offering a digital solution that helps communities organize resources and manage volunteers during disaster response efforts.
 
 This system contributes to SDG 11 in three key areas. First, it aids in **preparation** by allowing communities to track and store essential resources such as food, water, and medical supplies, ensuring quick mobilization when disaster strikes. The system's ability to maintain an updated inventory of resources helps communities be better prepared for emergencies. Second, during the **response and recovery** phases, it facilitates the assignment of tasks and the management of volunteers, ensuring that resources are deployed efficiently and volunteers can be quickly assigned to critical areas. Task tracking and real-time response monitoring ensure timely intervention in disaster-affected regions. Lastly, the system contributes to resilience building by allowing communities to track response times, resource usage, and volunteer deployment. This data helps communities improve their disaster response strategies over time.
+
+ <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
+</div>
 
 ### Running the Program 👩‍💻
 To run the ResQnect system, follow these steps:
