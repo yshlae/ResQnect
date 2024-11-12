@@ -49,7 +49,7 @@ In developing ResQnect, several Python concepts and libraries were applied to ac
   - *Data Updating:* For example, updating a volunteer’s availability status involves finding the specific volunteer, modifying their data, and saving the updated list back to the file.
 
 - **Printing and Formatting Strings**  
-  - `__str__` Method: In `Volunteer` and `Resource` classes, the `__str__` method customizes how information displays, making volunteer and resource data easy to read.
+  - `__str__` *Method:* In `Volunteer` and `Resource` classes, the `__str__` method customizes how information displays, making volunteer and resource data easy to read.
   - *Formatted Strings:* I used f-strings (e.g., `f"Task '{task_type}' has been assigned to {volunteer.name}.") to make output messages clear and dynamic.
 
 - **Lists and Dictionaries**  
