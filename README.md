@@ -156,4 +156,5 @@ To run the **ResQnect** Disaster Response Management System, follow these steps:
    - If you wish to exit the program, select **6. Exit** from the main menu.
 
 ---
-<p align="center">🌟 <b>Thank you for checking out ResQnect!</b> 🌟</p> ```
+<p align="center">🌟 <b>Thank you for checking out ResQnect!</b> 🌟</p> 
+<p align="center"> <b>Prepare, Respond, Recover, Repeat.</b> </p> 
