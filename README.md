@@ -126,7 +126,7 @@ To run the **ResQnect** Disaster Response Management System, follow these steps:
    - Choose **1. Volunteer Management** from the main menu.
    - The program will prompt you to enter the following details for a new volunteer:
      - **Name**: Enter the volunteer’s name.
-     - **Type**: Specify the type of volunteer (e.g., **medical** or **rescue**).
+     - **Type**: Specify the type of volunteer (e.g., **medical**,**rescue**, or **general**).
      - **Availability**: Specify if the volunteer is available or unavailable.
    - After entering the details, the program will save this data in **volunteers.json** for future use.
 
