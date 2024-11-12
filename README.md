@@ -75,7 +75,7 @@ In developing ResQnect, several Python concepts and libraries were applied to ac
 
 ### Integration with SDG 🌍
 <div align="center">
-  <img src="https://github.com/yshlae/ResQnect/blob/main/images/SDG%20Goal%2011.jpg" alt="SDG Goal 11" width="500">
+  <img src="https://github.com/yshlae/ResQnect/blob/main/images/SDG%20Goal%2011.png" alt="SDG Goal 11" width="600">
 </div>
 
 **Sustainable Development Goal (SDG) 11: Sustainable Cities and Communities** aims to make cities and human settlements inclusive, safe, resilient, and sustainable. This goal focuses on improving urban planning, reducing the impact of natural disasters, and ensuring that communities are better prepared to respond to and recover from emergencies. **ResQnect** directly supports this goal by offering a digital solution that helps communities organize resources and manage volunteers during disaster response efforts.
