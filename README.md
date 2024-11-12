@@ -89,7 +89,6 @@ This system contributes to SDG 11 in three key areas. First, it aids in **prepar
 </div>
 
 ### Running the Program 👩‍💻
-### Instructions for Running the Program 💻
 
 To run the ResQnect system, follow these steps:
 1. Clone the repository:
@@ -148,9 +147,13 @@ To run the **ResQnect** Disaster Response Management System, follow these steps:
    - The program will display the list of tasks with their current statuses (e.g., **Assigned**, **Completed**).
    - You can update the status of tasks (e.g., mark a task as **Completed** once it’s finished), ensuring real-time tracking of disaster response efforts.
   
-6. **Response Time Reports**
+6. **Response Time Reports: Viewing Task Response Times**
+   - Choose **5. Response Time Reports** from the main menu.
+   - The program will generate and display **response time reports**, showing the time taken from the assignment of a task to its completion.
+   - You can view a list of tasks along with their assigned times, completion times, and how long each task took to complete. This helps evaluate the efficiency of the response efforts and identify areas for improvement.
 
 7. **Exit**
    - If you wish to exit the program, select **6. Exit** from the main menu.
 
 ---
+<p align="center">🌟 <b>Thank you for checking out ResQnect!</b> 🌟</p> ```
