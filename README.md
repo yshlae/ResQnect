@@ -87,3 +87,7 @@ To run the ResQnect system, follow these steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/yshlae/ResQnect.git
+2. Navigate to the project repository:
+   ```bash
+   cd ResQnect
+
