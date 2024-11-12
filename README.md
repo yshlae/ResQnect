@@ -29,8 +29,37 @@
 
 ### Application of Python Concepts 🐍
 In developing ResQnect, several Python concepts and libraries were applied to achieve efficient and scalable performance, including:
-- **Object-Oriented Programming (OOP)** for a modular and maintainable structure.
-- **Error Handling** to ensure program reliability during real-world usage.
+
+1. **Classes and Objects (OOP Basics)**
+   - The `Volunteer` and `Resource` classes represent individual volunteers and resources.
+   - `VolunteerManager` and `ResourceManager` classes manage groups of volunteers and resources, handling actions like adding, viewing, or updating entries.
+   - The `DisasterResponseSystem` class brings everything together, managing volunteers, resources, tasks, and tracking responses.
+
+2. **Data Saving and Loading (JSON and File Handling)**
+   - **Data Persistence:** When a volunteer or resource is added or updated, their information is saved to a file (`volunteers.json` or `resources.json`). This ensures data persistence, so it remains available even if the program is closed and reopened.
+   - **Loading Data:** On startup, the system checks if the JSON files exist and loads the data, saving the user from having to re-enter information every time.
+
+3. **Looping and User Input Handling**
+   - **Main Menu:** The `DisasterResponseSystem` class utilizes a loop to display a main menu, allowing the user to choose actions like managing volunteers, managing resources, assigning tasks, tracking responses, viewing reports, or exiting the program.
+   - **Submenus:** Within the `VolunteerManager` and `ResourceManager` classes, submenus offer additional options (like adding, viewing, or updating records). `while True` loops in these sections enable continuous navigation until the user chooses to go back.
+
+4. **User Input and Simple Logic**
+   - **Getting User Input:** The system uses `input()` to gather details such as volunteer names, resource types, and quantities.
+   - **Condition Checking:** `if` statements handle various options based on user input, providing a prompt to re-enter if the input is invalid.
+   - **Updating Data:** For instance, updating a volunteer's availability involves finding the volunteer by name, modifying their status, and saving the revised data back to the file.
+
+5. **Printing and Formatting Strings**
+   - **`__str__` Method:** The `__str__` method in `Volunteer` and `Resource` classes customizes object printing, making volunteer availability and resource quantity display in a clean, readable format.
+   - **Formatted Strings:** F-strings (`f"Task '{task_type}' has been assigned to {volunteer.name}."`) add clarity to outputs, creating dynamic, readable messages.
+
+6. **Lists and Dictionaries**
+   - **Lists:** Volunteers are stored in a list (`self.volunteers`), allowing easy addition and removal.
+   - **Dictionaries:** Resources are stored in a dictionary (`self.resources`) where each resource type (like "food" or "water") serves as a key, and its quantity as the value. This setup allows quick updating of resource quantities.
+
+7. **Task Assignment and Tracking**
+   - **Assigning Tasks:** Users can assign tasks (e.g., medical aid, food distribution) to available volunteers.
+   - **Tracking Tasks:** Assigned tasks are recorded in a list, and their statuses (e.g., “Assigned” or “Completed”) can be updated.
+   - **Response Tracking:** This feature monitors each volunteer's assigned tasks and their status, enhancing real-time response tracking.
 
 ### Integration with SDG 🌍
 <div align="center">
