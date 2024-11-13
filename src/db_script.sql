@@ -33,7 +33,7 @@ INSERT INTO Volunteers (name, v_type, available) VALUES
 ('Kyle Banaag', 'general', TRUE),
 ('Lei Salvador', 'general', TRUE),
 ('Edsel Rosales', 'rescue', FALSE),
-('Glennzel Gonda', 'general', TRUE),
+('Glennzel Gonda', 'rescue', TRUE),
 ('Romulo Rosales', 'medical', TRUE);
 
 INSERT INTO Resources (r_type, quantity) VALUES
