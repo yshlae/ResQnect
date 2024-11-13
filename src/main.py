@@ -125,9 +125,16 @@ class ResourceManager:
 
     def add_resource(self):
         print("\n=== Add a New Resource ===")
-        r_type = input("Enter resource type (food, water, clothes, etc.): ")
-        quantity = int(input("Enter quantity: "))
-        self.resources[r_type] = Resource(r_type, quantity)
+        r_type = input("Enter resource type: ").lower()  # Case-insensitive input
+
+        # Check if the resource is monetary to prompt for an amount
+        if r_type in ["money", "monetary resource"]:
+            amount = float(input("Enter amount: "))
+            self.resources[r_type] = Resource(r_type, amount)
+        else:
+            quantity = int(input("Enter quantity: "))
+            self.resources[r_type] = Resource(r_type, quantity)
+
         self.save_resources()
         print(f"Resource '{r_type}' added successfully!")
 
@@ -140,12 +147,20 @@ class ResourceManager:
                 print(resource)
 
     def update_resource_quantity(self):
-        r_type = input("Enter resource type to update quantity: ")
+        r_type = input("Enter resource type to update quantity: ").lower()  # Case-insensitive input
+
         if r_type in self.resources:
-            quantity = int(input("Enter new quantity: "))
-            self.resources[r_type].quantity = quantity
+            # Check if resource is monetary to prompt for an amount update
+            if r_type in ["money", "monetary resource"]:
+                amount = float(input("Enter new amount: "))
+                self.resources[r_type].quantity = amount
+                print(f"Amount for '{r_type}' updated to {amount}!")
+            else:
+                quantity = int(input("Enter new quantity: "))
+                self.resources[r_type].quantity = quantity
+                print(f"Quantity for '{r_type}' updated to {quantity}!")
+            
             self.save_resources()
-            print(f"Quantity for '{r_type}' updated!")
         else:
             print("Resource not found.")
 
@@ -158,7 +173,7 @@ class ResourceManager:
         if os.path.exists("resources.json"):
             with open("resources.json", "r") as f:
                 data = json.load(f)
-                self.resources = {k: Resource(**v) for k, v in data.items()}
+                self.resources = {k.lower(): Resource(**v) for k, v in data.items()}
 
 # Disaster Response System
 class DisasterResponseSystem:
