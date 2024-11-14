@@ -28,7 +28,7 @@ INSERT INTO Volunteers (name, v_type, available) VALUES
 ('Wennie Cascalla', 'medical', TRUE),
 ('John Loyd Bunyi', 'rescue', TRUE),
 ('Marianito Frane', 'general', TRUE),
-('Rayla Qui', 'medical', FALSE),
+('Rayla Qui', 'medical', TRUE),
 ('Poul Aranas', 'rescue', TRUE),
 ('Kyle Banaag', 'general', TRUE),
 ('Lei Salvador', 'general', TRUE),
