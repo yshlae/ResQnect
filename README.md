@@ -37,14 +37,14 @@ In developing ResQnect, several Python concepts and libraries were applied to ac
 
  - **Encapsulation**  💊
    - Refers to bundling data and methods that operate on that data into a single unit or class, while restricting direct access to some of the object’s components.
-   - In the `Volunteer` and `Resource` classes, I encapsulated the attributes (e.g., name, `v_type`, quantity) and their corresponding methods. These methods control how the data is accessed and updated, preventing direct manipulation of object attributes.
+   - In the `Volunteer` and `Resource` classes, I encapsulated the attributes (ex., name, `v_type`, quantity) and their corresponding methods. These methods control how the data is accessed and updated, preventing direct manipulation of object attributes.
 
  - **Abstraction**  🗄️
-   - Concept of hiding the complex implementation details and exposing only the essential features of an object or system. In the `VolunteerManager` and `ResourceManager` classes, I abstracted complex operations like saving/loading data and updating records. The user interacts with simple menus, not needing to know the internal workings (e.g., file handling or JSON parsing).
+   - Concept of hiding the complex implementation details and exposing only the essential features of an object or system. In the `VolunteerManager` and `ResourceManager` classes, I abstracted complex operations like saving/loading data and updating records. The user interacts with simple menus, not needing to know the internal workings (ex., file handling or JSON parsing).
    - The `DisasterResponseSystem` class abstracts the process of managing volunteers, resources, and tasks by using a simple menu system. Users can focus on high-level actions (assigning tasks, managing resources) without needing to handle individual tasks behind the scenes.
 
  - **Polymorphism**  📑
-    - Allows different classes to define methods with the same name, but each can behave differently depending on the class it belongs to. I applied polymorphism in the `__str__()` method. Both the `Volunteer` and `Resource` classes have a `__str__()` method that returns a string representation of the object, but each class has its own implementation to represent its attributes (e.g., volunteer name and availability vs. resource type and quantity). 
+    - Allows different classes to define methods with the same name, but each can behave differently depending on the class it belongs to. I applied polymorphism in the `__str__()` method. Both the `Volunteer` and `Resource` classes have a `__str__()` method that returns a string representation of the object, but each class has its own implementation to represent its attributes (ex., volunteer name and availability vs. resource type and quantity). 
     - The same `save_volunteers()` and `save_resources()` methods work for different data types (volunteers and resources) despite the differences in how they are structured, allowing for consistent handling and storage of data.
 
 - **Data Saving and Loading (JSON and File Handling)**  🗂️
@@ -62,15 +62,15 @@ In developing ResQnect, several Python concepts and libraries were applied to ac
 
 - **Printing and Formatting Strings**  🗳️
   - `__str__` *Method:* In `Volunteer` and `Resource` classes, the `__str__` method customizes how information displays, making volunteer and resource data easy to read.
-  - *Formatted Strings:* I used f-strings (e.g., `f"Task '{task_type}' has been assigned to {volunteer.name}.") to make output messages clear and dynamic.
+  - *Formatted Strings:* I used f-strings (ex., `f"Task '{task_type}' has been assigned to {volunteer.name}.") to make output messages clear and dynamic.
 
 - **Lists and Dictionaries**  📋
   - *Lists for Volunteer Storage:* All volunteers are stored in a list (`self.volunteers`), making it easy to add, remove, or iterate through them.
   - *Dictionaries for Resource Management:* Resources are organized in a dictionary (`self.resources`) with resource types as keys and quantities as values. This allows for quick lookups and updates.
 
 - **Task Assignment and Tracking**  ⏱️
-  - *Assigning Tasks:* Users can assign tasks (e.g., medical aid, food distribution) to available volunteers.
-  - *Tracking Tasks:* Assigned tasks are saved in a list, allowing for status updates (e.g., “Assigned” to “Completed”).
+  - *Assigning Tasks:* Users can assign tasks (ex., medical aid, food distribution) to available volunteers.
+  - *Tracking Tasks:* Assigned tasks are saved in a list, allowing for status updates (ex., “Assigned” to “Completed”).
   - *Response Tracking:* Each volunteer’s assigned tasks and their statuses are tracked, providing an overview of response efforts in real time.
 
 <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
@@ -126,7 +126,7 @@ To run the **ResQnect** Disaster Response Management System, follow these steps:
    - Choose **1. Volunteer Management** from the main menu.
    - The program will prompt you to enter the following details for a new volunteer:
      - **Name**: Enter the volunteer’s name.
-     - **Type**: Specify the type of volunteer (e.g., **medical**,**rescue**, or **general**).
+     - **Type**: Specify the type of volunteer (ex., **medical**,**rescue**, or **general**).
      - **Availability**: Specify if the volunteer is available or unavailable.
    - After entering the details, the program will save this data in **volunteers.json** for future use.
 
@@ -144,8 +144,8 @@ To run the **ResQnect** Disaster Response Management System, follow these steps:
 
 5. **Disaster Response Tracker: Tracking and Updating Tasks**
    - Choose **4. Disaster Response Tracker** from the main menu to view and manage ongoing tasks.
-   - The program will display the list of tasks with their current statuses (e.g., **Assigned**, **Completed**).
-   - You can update the status of tasks (e.g., mark a task as **Completed** once it’s finished), ensuring real-time tracking of disaster response efforts.
+   - The program will display the list of tasks with their current statuses (ex., **Assigned**, **Completed**).
+   - You can update the status of tasks (ex., mark a task as **Completed** once it’s finished), ensuring real-time tracking of disaster response efforts.
   
 6. **Response Time Reports: Viewing Task Response Times**
    - Choose **5. Response Time Reports** from the main menu.
