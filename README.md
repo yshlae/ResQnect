@@ -57,7 +57,7 @@ In developing ResQnect, several Python concepts and libraries were applied to ac
 
 - **User Input and Logical Processing**  🗃️
   - *Getting User Input:* The program uses `input()` to gather details like volunteer names, resource types, and quantities.
-  - *Condition Checking:* I used `if` statements to manage user choices, prompting re-entry when inputs are invalid.
+  - *Condition Checking:* I used `if` statements to manage user choices, prompting re-enter when inputs are invalid.
   - *Data Updating:* For example, updating a volunteer’s availability status involves finding the specific volunteer, modifying their data, and saving the updated list back to the file.
 
 - **Printing and Formatting Strings**  🗳️
