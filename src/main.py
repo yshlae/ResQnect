@@ -150,7 +150,7 @@ class ResourceManager:
         r_type = input("Enter resource type to update quantity: ").lower()  # Case-insensitive input
 
         if r_type in self.resources:
-            # Check if resource is monetary to prompt for an amount update
+            # Check if resource is monetary to prompt for an amount 
             if r_type in ["money", "monetary resource"]:
                 amount = float(input("Enter new amount: "))
                 self.resources[r_type].quantity = amount
@@ -267,7 +267,6 @@ class DisasterResponseSystem:
             else:
                print(f"Task: {task['task_type']} | Volunteer: {task['volunteer']} | Status: Pending")
 
-# Initialize and start the system
 if __name__ == "__main__":
     system = DisasterResponseSystem()
     system.start()
