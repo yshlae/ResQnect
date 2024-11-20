@@ -92,7 +92,7 @@ To run the ResQnect system, follow these steps:
 
 ### Instructions for Running the Program 💻
 
-To run the **ResQnect** Disaster Response Management System, follow these steps:
+To run the **ResQnect** Disaster Response and Relief Management System, follow these steps:
 
 1. **Start the Program**  
    When you run the program, you will be presented with the **main menu**. The menu will look something like this:
