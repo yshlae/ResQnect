@@ -1,3 +1,5 @@
+# disaster_response_system.py
+
 import time
 import json
 import os
@@ -125,16 +127,13 @@ class ResourceManager:
 
     def add_resource(self):
         print("\n=== Add a New Resource ===")
-        r_type = input("Enter resource type: ").lower()  # Case-insensitive input
-
-        # Check if the resource is monetary to prompt for an amount
+        r_type = input("Enter resource type: ").lower()
         if r_type in ["money", "monetary resource"]:
             amount = float(input("Enter amount: "))
             self.resources[r_type] = Resource(r_type, amount)
         else:
             quantity = int(input("Enter quantity: "))
             self.resources[r_type] = Resource(r_type, quantity)
-
         self.save_resources()
         print(f"Resource '{r_type}' added successfully!")
 
@@ -147,10 +146,8 @@ class ResourceManager:
                 print(resource)
 
     def update_resource_quantity(self):
-        r_type = input("Enter resource type to update quantity: ").lower()  # Case-insensitive input
-
+        r_type = input("Enter resource type to update quantity: ").lower()
         if r_type in self.resources:
-            # Check if resource is monetary to prompt for an amount 
             if r_type in ["money", "monetary resource"]:
                 amount = float(input("Enter new amount: "))
                 self.resources[r_type].quantity = amount
@@ -159,7 +156,6 @@ class ResourceManager:
                 quantity = int(input("Enter new quantity: "))
                 self.resources[r_type].quantity = quantity
                 print(f"Quantity for '{r_type}' updated to {quantity}!")
-            
             self.save_resources()
         else:
             print("Resource not found.")
@@ -181,6 +177,79 @@ class DisasterResponseSystem:
         self.volunteer_manager = VolunteerManager()
         self.resource_manager = ResourceManager()
         self.tasks = []
+        self.volunteers = []  
+        self.resources = []   
+        self.disasters = []  
+
+    def add_volunteer(self, volunteer):
+        self.volunteers.append(volunteer)
+        v = Volunteer(volunteer["name"], volunteer["type"], volunteer["availability"].lower() == "yes")
+        self.volunteer_manager.volunteers.append(v)
+        self.volunteer_manager.save_volunteers()
+
+    def add_resource(self, resource):
+        self.resources.append(resource)
+        r = Resource(resource["name"], float(resource["quantity"]) if resource["monetary"].lower() == "yes" else int(resource["quantity"]))
+        self.resource_manager.resources[resource["name"].lower()] = r
+        self.resource_manager.save_resources()
+
+    def assign_task(self, task):
+        task_data = {
+            "task_type": task["description"],
+            "volunteer": task["volunteer"],
+            "status": "Assigned",
+            "assigned_time": datetime.now(),
+            "completion_time": None
+        }
+        self.tasks.append(task_data)
+        
+        disaster_entry = {
+            "status": "In Progress",
+            "volunteer": task["volunteer"],
+            "task_assigned": task["description"]
+        }
+        self.disasters.append(disaster_entry)
+
+    def track_disaster_response(self):
+        print("\n=== Disaster Response Tracker ===")
+        if not self.tasks:
+            print("No tasks available to track.")
+            return
+        
+        print("\nCurrent Tasks and Status Updates:")
+        for i, task in enumerate(self.tasks, start=1):
+            print(f"{i}. Task: {task['task_type']}, Volunteer: {task['volunteer']}, Status: {task['status']}")
+        
+        task_index = int(input("Enter the task number to update its status, or 0 to go back: "))
+        
+        if task_index == 0:
+            return
+        elif 1 <= task_index <= len(self.tasks):
+            task = self.tasks[task_index - 1]
+            new_status = input("Enter new status: ")
+            task['status'] = new_status
+
+            if new_status.lower() == 'completed' and task['completion_time'] is None:
+                task['completion_time'] = datetime.now()
+            
+            print(f"Task status updated to '{new_status}'.")
+        else:
+            print("Invalid task number.")
+
+    def generate_response_time_report(self):
+        print("\n=== Response Time Report ===")
+        for task in self.tasks:
+            if task['completion_time'] is not None:
+                time_taken = task['completion_time'] - task['assigned_time']
+                time_taken_seconds = time_taken.total_seconds()
+                hours = int(time_taken_seconds // 3600)
+                minutes = int((time_taken_seconds % 3600) // 60)
+                seconds = int(time_taken_seconds % 60)
+                response_time_str = f"{hours:02}:{minutes:02}:{seconds:02}"
+
+                print(f"Task: {task['task_type']} | Volunteer: {task['volunteer']} | Response Time: {response_time_str}")
+            else:
+                print(f"Task: {task['task_type']} | Volunteer: {task['volunteer']} | Status: Pending")
 
     def start(self):
         while True:
@@ -210,62 +279,6 @@ class DisasterResponseSystem:
                 break
             else:
                 print("Invalid option. Please try again.")
-
-    def assign_task(self):
-        print("\n=== Task Assignment ===")
-        task_type = input("Enter task type (rescue/medical/food distribution): ")
-        volunteer_name = input("Enter volunteer name to assign the task to: ")
-
-        volunteer = next((v for v in self.volunteer_manager.volunteers if v.name.lower() == volunteer_name.lower()), None)
-        if volunteer and volunteer.available:
-            task = {"task_type": task_type, "volunteer": volunteer.name, "status": "Assigned", "assigned_time": datetime.now(), "completion_time": None}
-            self.tasks.append(task)
-            print(f"Task '{task_type}' has been assigned to {volunteer.name}.")
-        else:
-            print("Volunteer not found or unavailable.")
-
-    def track_disaster_response(self):
-        print("\n=== Disaster Response Tracker ===")
-        if not self.tasks:
-            print("No tasks available to track.")
-            return
-        
-        print("\nCurrent Tasks and Status Updates:")
-        for i, task in enumerate(self.tasks, start=1):
-            print(f"{i}. Task: {task['task_type']}, Volunteer: {task['volunteer']}, Status: {task['status']}")
-        
-        task_index = int(input("Enter the task number to update its status, or 0 to go back: "))
-        
-        if task_index == 0:
-            return
-        elif 1 <= task_index <= len(self.tasks):
-            task = self.tasks[task_index - 1]
-            new_status = input("Enter new status: ")
-            task['status'] = new_status
-
-            # Record completion time when task is marked as "Completed"
-            if new_status.lower() == 'completed' and task['completion_time'] is None:
-                task['completion_time'] = datetime.now()  # Set the exact time of completion
-            
-            print(f"Task status updated to '{new_status}'.")
-        else:
-            print("Invalid task number.")
-
-    def generate_response_time_report(self):
-        print("\n=== Response Time Report ===")
-        for task in self.tasks:
-            if task['completion_time'] is not None:
-               time_taken = task['completion_time'] - task['assigned_time']
-               # Convert the time_taken to a formatted string in hh:mm:ss
-               time_taken_seconds = time_taken.total_seconds()
-               hours = int(time_taken_seconds // 3600)
-               minutes = int((time_taken_seconds % 3600) // 60)
-               seconds = int(time_taken_seconds % 60)
-               response_time_str = f"{hours:02}:{minutes:02}:{seconds:02}"
-
-               print(f"Task: {task['task_type']} | Volunteer: {task['volunteer']} | Response Time: {response_time_str}")
-            else:
-               print(f"Task: {task['task_type']} | Volunteer: {task['volunteer']} | Status: Pending")
 
 if __name__ == "__main__":
     system = DisasterResponseSystem()
