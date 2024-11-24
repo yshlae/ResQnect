@@ -3,7 +3,7 @@
   
   <h1>ResQnect</h1>
   
-  <h3>🚨 Prepare, Respond, Recover, Repeat. 🚨 <br>
+  <h3>🪢 Prepare, Respond, Recover, Repeat. 🪢 <br>
   A disaster response and relief management system for communities. Built for support, made to connect.</h3>
   
   <p><b>IT 2104</b><br>
@@ -139,4 +139,4 @@ To run the **ResQnect** Disaster Response and Relief Management System, follow t
    - If you wish to exit the program, select **6. Exit** from the main menu.
 
 ---
-<p align="center">🌟 <b>Prepare, Respond, Recover, Repeat!</b> 🌟</p> 
+<p align="center">🚨 <b>Prepare, Respond, Recover, Repeat!</b> 🚨</p> 
