@@ -59,3 +59,42 @@ INSERT INTO Tasks (task_type, volunteer_id, status, completion_time) VALUES
 ('medical', 8, 'Assigned', NULL),
 ('food distribution', 9, 'Completed', '2024-11-12 11:20:00'),
 ('rescue', 10, 'Completed', '2024-11-12 13:30:00');
+
+SELECT 
+    T.task_id,
+    T.task_type,
+    T.status,
+    V.name AS volunteer_name,
+    R.r_type AS resource_type
+FROM 
+    Tasks T
+LEFT JOIN Volunteers V ON T.volunteer_id = V.volunteer_id
+LEFT JOIN Resources R ON T.task_type = R.r_type;
+
+UPDATE Volunteers
+SET available = FALSE
+WHERE name = 'John Loyd Bunyi';
+
+DELETE FROM Resources
+WHERE r_type = 'Masks';
+
+SELECT 
+    SUM(quantity) AS total_resources
+FROM 
+    Resources;
+
+SELECT 
+    V.volunteer_id,
+    V.name,
+    COUNT(T.task_id) AS completed_tasks
+FROM 
+    Volunteers V
+INNER JOIN Tasks T ON V.volunteer_id = T.volunteer_id
+WHERE 
+    T.status = 'Completed'
+GROUP BY 
+    V.volunteer_id, V.name
+HAVING 
+    COUNT(T.task_id) > 0
+ORDER BY 
+    completed_tasks DESC;
