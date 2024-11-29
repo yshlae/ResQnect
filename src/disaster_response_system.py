@@ -1,7 +1,6 @@
 import time
 import json
 import os
-from tabulate import tabulate
 from datetime import datetime
 
 # Volunteer class
