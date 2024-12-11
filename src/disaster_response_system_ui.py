@@ -24,7 +24,7 @@ class DisasterResponseUI:
         self.create_widgets()
 
         try:
-            self.icon_image = tk.PhotoImage(file=r"C:\Users\Acer\Downloads\python\resqnect_logo-removebg-preview.png")
+            self.icon_image = tk.PhotoImage(file=r"C:\Users\Acer\Downloads\RESQNECT-removebg-preview.png") 
             self.root.iconphoto(False, self.icon_image)
         except Exception:
             print("Warning: Icon image not found. Proceeding without it.")
